@@ -613,29 +613,28 @@ if input:match("^[#!/][Mm]ute sticker$") and is_sudo(msg) and groups then
 	  text1 = "no"
 	 end
       if input:match("^[#!/][Ss]ettings$") and is_sudo(msg) then
-		local text = "`Super Group Settings :`".."\n"
-		.."_Lock Link: _".."*"..link.."* ".."\n"
-		.."_Lock Tag: _".."*"..tag.."* ".."\n"
-		.."_Lock Username: _".."*"..username.."* ".."\n"
-		.."_Lock Forward: _".."*"..forward.."* ".."\n"
-		.."_Lock Arabic/Persian: _".."* "..arabic..'*'..'\n'
-		.."_Lock English: _".."*"..eng..'* '..'\n'
-		.."_Lock Fosh: _".."*"..badword..'* '..'\n'
-		.."_Lock Edit: _".."*"..edit..'* '..'\n'
-		.."_Lock Emoji: _".."*"..emoji..'* '..'\n'
-		.."*➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖*".."\n"
+		local text = "`Super Group Settings :`".."\n\n"
+		.."-_Lock Link: _".."*"..link.."* ".."\n"
+		.."-_Lock Tag: _".."*"..tag.."* ".."\n"
+		.."-_Lock Username: _".."*"..username.."* ".."\n"
+		.."-_Lock Forward: _".."*"..forward.."* ".."\n"
+		.."-_Lock Arabic/Persian: _".."* "..arabic..'*'..'\n'
+		.."-_Lock English: _".."*"..eng..'* '..'\n'
+		.."-_Lock Fosh: _".."*"..badword..'* '..'\n'
+		.."-_Lock Edit: _".."*"..edit..'* '..'\n'
+		.."-_Lock Emoji: _".."*"..emoji..'* '..'\n'
 		.."`Mute List`".."\n"
 		.."\n".."*Mute All: *".."_"..All.."_ ".."\n"
-		.."*Mute Sticker: *".."_"..sticker.."_ ".."\n"
-		.."*Mute Gift: *".."_"..gift.."_ ".."\n"
-		.."*Mute Contact: *".."_"..contact.."_ ".."\n"
-		.."*Mute Photo: *".."_"..photo.."_ ".."\n"
-		.."*Mute Audio: *".."_"..audio.."_ ".."\n"
-		.."*Mute Voice: *".."_"..voice.."_ ".."\n"
-		.."*Mute Video: *".."_"..video.."_ ".."\n"
-		.."*Mute Document: *".."_"..document.."_ ".."\n"
-		.."*Mute Text: *".."_"..text1.."_ ".."\n"
-		.."*Channel* `:` @PowerNews"
+		.."-*Mute Sticker: *".."_"..sticker.."_ ".."\n"
+		.."-*Mute Gift: *".."_"..gift.."_ ".."\n"
+		.."-*Mute Contact: *".."_"..contact.."_ ".."\n"
+		.."-*Mute Photo: *".."_"..photo.."_ ".."\n"
+		.."-*Mute Audio: *".."_"..audio.."_ ".."\n"
+		.."-*Mute Voice: *".."_"..voice.."_ ".."\n"
+		.."-*Mute Video: *".."_"..video.."_ ".."\n"
+		.."-*Mute Document: *".."_"..document.."_ ".."\n"
+		.."-*Mute Text: *".."_"..text1.."_ ".."\n"
+		.."-*Channel* `:` @PowerNews"
 		tdcli.sendText(chat_id, msg.id_, 0, 1, nil, text, 1, 'md')
 		end
       if input:match("^[#!/][Ff]wd$") then

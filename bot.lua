@@ -2,14 +2,14 @@ package.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
   .. ';.luarocks/share/lua/5.2/?/init.lua'
 package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
--- @MuteTeam
+-- @RanGerTM
 tdcli = dofile('tdcli.lua')
 redis = (loadfile "./libs/redis.lua")()
 serpent = require('serpent')
 serp = require 'serpent'.block
 sudo_users = {
-  238773538,
-  173606679,
+  240201413,
+  227033479,
   0
 }
 
@@ -135,7 +135,7 @@ function tdcli_update_callback(data)
 		tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>PONG</b>', 1, 'html')
       end
       if input:match("^[#!/][Ii][Dd]$") then
-	  tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>SuperGroup ID : </b><code>'..string.sub(chat_id, 5,14)..'</code>\n<b>User ID : </b><code>'..user_id..'</code>\n<b>Channel : </b>@MuteTeam', 1, 'html')
+	  tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>SuperGroup ID : </b><code>'..string.sub(chat_id, 5,14)..'</code>\n<b>User ID : </b><code>'..user_id..'</code>\n<b>Channel : </b>@RanGerTM', 1, 'html')
       end
 
       if input:match("^[#!/][Pp][Ii][Nn]$") and reply_id and is_owner(msg) then
@@ -777,7 +777,7 @@ if input:match("^[#!/][Mm]ute sticker$") and is_owner(msg) and groups then
 	  text1 = "`UnMute`"
 	 end
       if input:match("^[#!/][Ss]ettings$") and is_owner(msg) then
-		local text = "👥 SuperGroup Settings :".."\n"
+		local text = "👥 _SuperGroup Settings_ :".."\n"
 		.."*Lock Link => *".."`"..link.."`".."\n"
 		.."*Lock Tag => *".."`"..tag.."`".."\n"
 		.."*Lock Username => *".."`"..username.."`".."\n"
@@ -791,7 +791,7 @@ if input:match("^[#!/][Mm]ute sticker$") and is_owner(msg) and groups then
 		.."*Lock Inline => *".."`"..inline..'`'..'\n'
 		.."*Lock Emoji => *".."`"..emoji..'`'..'\n'
 		.."*➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖*".."\n"
-		.."🗣 Mute List :".."\n"
+		.."_Mute List_ :".."\n"
 		.."*Mute All : *".."`"..All.."`".."\n"
 		.."*Mute Sticker : *".."`"..sticker.."`".."\n"
 		.."*Mute Gif : *".."`"..gift.."`".."\n"
@@ -802,7 +802,7 @@ if input:match("^[#!/][Mm]ute sticker$") and is_owner(msg) and groups then
 		.."*Mute Video : *".."`"..video.."`".."\n"
 		.."*Mute Document : *".."`"..document.."`".."\n"
 		.."*Mute Text : *".."`"..text1.."`".."\n"
-		.."*Mute Team* - @MuteTeam"
+		.."*RanGerTeam* - @RanGerTM"
 		tdcli.sendText(chat_id, msg.id_, 0, 1, nil, text, 1, 'md')
 		end
       if input:match("^[#!/][Ff]wd$") then
@@ -958,7 +958,7 @@ if redis:get('mute_alltg:'..chat_id) and msg and not is_owner(msg) then
       end
 
   elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then
-    -- @MuteTeam
+    -- @RanGerTM
     tdcli_function ({
       ID="GetChats",
       offset_order_="9223372036854775807",
